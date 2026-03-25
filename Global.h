@@ -1,5 +1,4 @@
 #pragma once
-#include "clsScreen.h"
-#include "clsUser.h"
+#include "clsAtmSystem.h"
 
-clsUser CuurrentUser = clsUser::Find("", "");
+clsAtmSystem CurrentClient = clsAtmSystem::Find("", "");

@@ -18,26 +18,12 @@ protected:
         }
         cout << "\n\t\t\t\t\t______________________________________\n\n";
 
-        cout << "\n\t\t\t\t\tUser: " << CuurrentUser.UserName << endl;
-        cout << "\t\t\t\t\tDate:" << clsDateLibrary::DateToString(clsDateLibrary()) << endl << endl;
+        cout << "\n\t\t\t\t\tClient Name: " << CurrentClient.FullName() << endl;
+        cout << "\t\t\t\t\tDate:" << clsDateLibrary::DateToString(clsDateLibrary()) << endl;
+        if (Title == "Quick WithDraw Menu" || Title == "With Draw Screen")
+            cout << "\t\t\t\t\tTotal Balance: " << CurrentClient.AccountBalance << endl << endl ;
 
     }
-
-    static bool CheckAccessRight(clsUser::enPermissions Permission)
-    {
-        if (!CuurrentUser.CheckAccessPermissions(Permission))
-        {
-            cout << "\t\t\t\t\t______________________________________";
-            cout << "\n\n\t\t\t\t\t  " << "Access Denied , Contact Your Admin";
-            cout << "\n\t\t\t\t\t______________________________________\n\n";
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
-
 
 };
 
